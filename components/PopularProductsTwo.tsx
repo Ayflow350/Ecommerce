@@ -1,3 +1,5 @@
+"use client";
+
 import img1 from "../public/Image.svg";
 import img2 from "../public/Image-1.svg";
 import img3 from "../public/Image-2.svg";
@@ -11,6 +13,7 @@ import img10 from "../public/Product Image.svg";
 import { SlHandbag } from "react-icons/sl";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { CiHeart } from "react-icons/ci";
+import StarRatings from "react-star-ratings";
 
 import React from "react";
 import Image from "next/image";
@@ -21,61 +24,61 @@ export default function PopularCatergories() {
       icon: img1,
       Name: "Green Apple",
       Price: "$14.99",
-      star: "⭐️⭐️⭐️⭐️⭐️",
+     
     },
     {
       icon: img2,
       Name: "Fresh Indian Malta",
       Price: "$20.00",
-      star: "⭐️⭐️⭐️⭐️⭐️",
+     
     },
     {
       icon: img10,
       Name: "Chinese cabbage",
       Price: "$9.00",
-      star: "⭐️⭐️⭐️⭐️⭐️",
+     
     },
     {
       icon: img6,
       Name: "Green Lettuce",
       Price: "$34.00",
-      star: "⭐️⭐️⭐️⭐️⭐️",
+     
     },
     {
       icon: img8,
       Name: "Eggplant",
       Price: "$20.00",
-      star: "⭐️⭐️⭐️⭐️⭐️",
+     
     },
     {
       icon: img3,
       Name: "Big Potatoes",
       Price: "$20.00",
-      star: "⭐️⭐️⭐️⭐️⭐️",
+     
     },
     {
       icon: img4,
       Name: "Fresh Cauliflower",
       Price: "$12.00",
-      star: "⭐️⭐️⭐️⭐️⭐️",
+     
     },
     {
       icon: img5,
       Name: "Baking Needs",
       Price: "$9.00",
-      star: "⭐️⭐️⭐️⭐️⭐️",
+     
     },
     {
       icon: img7,
       Name: "Green Capsicum",
       Price: "$14.99",
-      star: "⭐️⭐️⭐️⭐️⭐️",
+     
     },
     {
       icon: img9,
       Name: "Green Chili",
       Price: "$34.00",
-      star: "⭐️⭐️⭐️⭐️⭐️",
+     
     },
   ];
 
@@ -100,13 +103,22 @@ export default function PopularCatergories() {
                       {item.Name}
                     </h1>
                     <h1 className="text-base font-medium">{item.Price}</h1>
+                    <div className="">
+                      <StarRatings
+                        rating={4}
+                        starRatedColor="#FF8A00"
+                        changeRating={(newRating) => console.log(newRating)}
+                        numberOfStars={5}
+                        name="rating"
+                        starDimension="15px" // Controls the size of the stars
+                        starSpacing="2px"
+                      />
+                    </div>
                   </div>
                   <div className="bg-[#F2F2F2] group-hover:bg-[#2C742F]  rounded-full w-10 h-10 px-[12.5px] py-[12px] text-[10px] flex items-center justify-center">
                     <SlHandbag className="text-black w-5 h-5 group-hover:text-[#FFFF]" />
                   </div>
                 </div>
-
-                <h1 className="mb-3">{item.star}</h1>
               </div>
               <div className="flex flex-col gap-y-[6px] absolute ">
                 <button className="bg-[#F2F2F2] hidden group-hover:flex rounded-full w-10 h-10 px-[12.5px] py-[12px] text-[10px] items-center justify-center">
