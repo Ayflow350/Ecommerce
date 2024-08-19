@@ -69,7 +69,7 @@ export default function PopularCatergories() {
       <h1 className="text-[24px] md:text-[32px] font-medium lg:font-semibold">
         Popular Categories
       </h1>
-      <div className="pt-5 md:pt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
+      <div className="pt-5 md:pt-10 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center">
         {data.map((item, index) => (
           <div
             key={index} // Unique key for each item

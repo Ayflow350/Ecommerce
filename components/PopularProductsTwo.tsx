@@ -1,5 +1,4 @@
 "use client";
-
 import img1 from "../public/Image.svg";
 import img2 from "../public/Image-1.svg";
 import img3 from "../public/Image-2.svg";
@@ -14,6 +13,7 @@ import { SlHandbag } from "react-icons/sl";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { CiHeart } from "react-icons/ci";
 import StarRatings from "react-star-ratings";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 import React from "react";
 import Image from "next/image";
@@ -24,69 +24,67 @@ export default function PopularCatergories() {
       icon: img1,
       Name: "Green Apple",
       Price: "$14.99",
-     
     },
     {
       icon: img2,
       Name: "Fresh Indian Malta",
       Price: "$20.00",
-     
     },
     {
       icon: img10,
       Name: "Chinese cabbage",
       Price: "$9.00",
-     
     },
     {
       icon: img6,
       Name: "Green Lettuce",
       Price: "$34.00",
-     
     },
     {
       icon: img8,
       Name: "Eggplant",
       Price: "$20.00",
-     
     },
     {
       icon: img3,
       Name: "Big Potatoes",
       Price: "$20.00",
-     
     },
     {
       icon: img4,
       Name: "Fresh Cauliflower",
       Price: "$12.00",
-     
     },
     {
       icon: img5,
       Name: "Baking Needs",
       Price: "$9.00",
-     
     },
     {
       icon: img7,
       Name: "Green Capsicum",
       Price: "$14.99",
-     
     },
     {
       icon: img9,
       Name: "Green Chili",
       Price: "$34.00",
-     
     },
   ];
 
   return (
     <div className="mt-6 lg:mt-12 bg-white container mx-auto">
-      <h1 className="text-[24px] md:text-[32px] font-medium lg:font-semibold">
-        Popular Categories
-      </h1>
+      <div className="flex justify-between">
+        <h1 className="text-[24px] md:text-[32px] font-medium lg:font-semibold">
+          Popular Categories
+        </h1>
+        <div>
+          <button className="rounded-[23px]  text-[12px] lg:rounded-[53px] flex items-center gap-x-4 bg-white text-[#00B207] md:text-[16px]  px-5 py-2 md:px-10 md:py-4">
+            View All
+            <FaArrowRightLong />
+          </button>
+        </div>
+      </div>
       <div className="pt-5 md:pt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 justify-items-center">
         {data.map((item, index) => (
           <div key={index} className="flex items-center">

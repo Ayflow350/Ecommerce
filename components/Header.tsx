@@ -52,7 +52,7 @@ export default function Header() {
         <div className="relative  overflow-hidden max-w-[498px]  hidden md:inline-flex">
           <input
             type="text"
-            className="border-l border-t border-b border-[#808080] max-w-[400px] max-h-[45px] rounded-lg pt-3 pb-3 pl-[16px] pr-[18px] placeholder:text-[15px] placeholder:font-light outline-none"
+            className="border-l border-t border-b border-[#808080] max-w-[400px]  max-h-[45px] rounded-lg pt-3 pb-3 pl-[16px] pr-[40px] placeholder:text-[15px] placeholder:font-light outline-none"
             placeholder=" search"
             onClick={() => setIsFocused(true)}
           />
@@ -82,7 +82,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="bg-[#333333] hidden md:flex py-[19.5px] md:px-[50px] lg:px-[100px] text-[#999999] justify-between">
+      <div className="bg-[#333333] hidden md:flex py-[19.5px] md:px-50 lg:px-[100px] text-[#999999] justify-between">
         <nav>
           <ul className="flex flex-row text-[14px] gap-x-8">
             {navItems.map((item) => (
